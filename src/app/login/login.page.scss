@@ -1,0 +1,24 @@
+ion-content {
+    --ion-background-color: #000000; // Cambia el color de fondo según tus preferencias
+     
+    
+     }
+
+     .forgot-password-link {
+        text-align: center;
+        margin-top: 20px; /* Puedes ajustar el margen superior según sea necesario */
+      }
+      
+
+      ion-img {
+        width: 60%; /* Ajusta el ancho de la imagen al 60% del contenedor */
+        max-width: 300px; /* Establece un ancho máximo para la imagen */
+        display: block; /* Asegura que la imagen sea un elemento de bloque para aplicar márgenes */
+        margin: 20px auto 0; /* Margen de 20px arriba, centrado horizontalmente y sin margen inferior */
+        text-align: center; /* Centra el contenido dentro de la imagen si es necesario */
+      }
+
+form {
+        margin-left: 40px; /* Márgen izquierdo de 20px */
+        margin-right: 20px; /* Márgen derecho de 20px */
+      }
