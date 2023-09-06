@@ -15,20 +15,13 @@ ion-card {
     margin-right: 16px;
   }
   
-  /* Estilo para la imagen del profesor */
-  .profile-img {
+  /* Estilo para la imagen del alumno */
+  ion-img {
     max-width: 100px;
     max-height: 100px;
     border-radius: 50% !important;
     overflow: hidden;   
   }
-
-    /* Estilo para la imagen qr */
-    .qr-img {
-        width: 80%;
-        padding-top: 10%;
-        margin: 0 auto;
-      }
   
   /* Estilo para el contenedor de los botones */
   .botones-container {

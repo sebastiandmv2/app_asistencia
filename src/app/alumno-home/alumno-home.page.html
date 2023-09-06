@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>alumno-home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">alumno-home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Contenedor para la información del alumno -->
+  <ion-card>
+    <!-- Nombre del alumno -->
+    <ion-card-header>
+      <ion-card-title>Nombre del Alumno</ion-card-title>
+    </ion-card-header>
+    <!-- Foto del alumno -->
+    <ion-img src="assets/estudiante.jpg"></ion-img>
+  </ion-card>
+
+    <!-- Contenedor de los botones -->
+  <div class="botones-container">
+    <!-- Botón para registrar asistencia -->
+    <ion-button class="boton-registrar">
+      Registrar Asistencia
+    </ion-button>
+
+    <!-- Botón para salir -->
+    <ion-button class="boton-salir" routerLink="/home">
+      Salir
+    </ion-button>
+  </div>
+</ion-content>

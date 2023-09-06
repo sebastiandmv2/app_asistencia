@@ -45,8 +45,8 @@ export class LoginPage {
       if (this.user.email === 'jirafales@duoc.cl') {
         this.router.navigate(['/profesor-home']); // Redirige a la página del profesor
       }
-      if (this.user.email === 'corchea@duoc.cl') {
-        this.router.navigate(['/alumno-qr']); // Redirige a la página del alumno
+      else if (this.user.email === 'corchea@duoc.cl') {
+        this.router.navigate(['/alumno-home']); // Redirige a la página del alumno
       } else {
         // Redirige a la página predeterminada (por ejemplo, scanner)
         this.router.navigate(['/scanner']);

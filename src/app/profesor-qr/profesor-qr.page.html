@@ -1,13 +1,41 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>profesor_qr</ion-title>
+    <ion-title>alumno-qr</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">profesor_qr</ion-title>
+      <ion-title size="large">profesor-qr</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <!-- Contenedor para la información del Profesor -->
+  <ion-card>
+    <!-- Nombre del Profesor -->
+    <ion-card-header>
+      <ion-card-title>Nombre del Profesor</ion-card-title>
+    </ion-card-header>
+    <!-- Foto del alumno -->
+    <ion-img class="profile-img" src="assets/profesor.jpg"></ion-img>
+  </ion-card>
+
+  <!-- Contenedor para la información del Ramo -->
+  <ion-card>
+    <!-- Nombre del Profesor -->
+      <ion-card-title>Asignatura Seleccionada</ion-card-title>
+  </ion-card>
+
+  <ion-img class="qr-img" src="assets/qr.jpg"></ion-img>
+
+
+    <!-- Contenedor de los botones -->
+  <div class="botones-container">
+
+    <!-- Botón para salir -->
+    <ion-button class="boton-salir" routerLink="/profesor-home">
+      Salir
+    </ion-button>
+  </div>
 </ion-content>
