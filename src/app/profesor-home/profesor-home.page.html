@@ -1,13 +1,88 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>profesor_home</ion-title>
+    <ion-title>profesor-home</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">profesor_home</ion-title>
+      <ion-title size="large">profesor-home</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <!-- Contenedor para la información del profesor y la lista -->
+  <ion-card>
+    <!-- Nombre del profesor -->
+    <ion-card-header>
+      <ion-card-title>Nombre del Profesor</ion-card-title>
+    </ion-card-header>
+    <!-- Foto del profesor -->
+    <ion-img src="assets/profesor.jpg"></ion-img>
+  </ion-card>
+
+  <!-- Lista de rectángulos con información estática -->
+  <ion-list class="rectangulos-list">
+    <!-- Primer rectángulo -->
+    <ion-item button (click)="presentActionSheet()">
+      <ion-label>
+        <h2>NOMBRE RAMO 1</h2>
+        <p>CÓDIGO RAMO 1</p>
+        <p>SECCIÓN 1</p>
+      </ion-label>
+    </ion-item>
+
+    <!-- Segundo rectángulo -->
+    <ion-item button (click)="presentActionSheet()">
+      <ion-label>
+        <h2>NOMBRE RAMO 2</h2>
+        <p>CÓDIGO RAMO 2</p>
+        <p>SECCIÓN 2</p>
+      </ion-label>
+    </ion-item>
+
+    <!-- Tercer rectángulo -->
+    <ion-item button (click)="presentActionSheet()">
+      <ion-label>
+        <h2>NOMBRE RAMO 3</h2>
+        <p>CÓDIGO RAMO 3</p>
+        <p>SECCIÓN 3</p>
+      </ion-label>
+    </ion-item>
+
+    <!-- Cuarto rectángulo -->
+    <ion-item button (click)="presentActionSheet()">
+      <ion-label>
+        <h2>NOMBRE RAMO 4</h2>
+        <p>CÓDIGO RAMO 4</p>
+        <p>SECCIÓN 4</p>
+      </ion-label>
+    </ion-item>
+
+    <!-- Quinto rectángulo -->
+    <ion-item button (click)="presentActionSheet()">
+      <ion-label>
+        <h2>NOMBRE RAMO 5</h2>
+        <p>CÓDIGO RAMO 5</p>
+        <p>SECCIÓN 5</p>
+      </ion-label>
+    </ion-item>
+
+    <!-- Sexto rectángulo -->
+    <ion-item button (click)="presentActionSheet()">
+      <ion-label>
+        <h2>NOMBRE RAMO 6</h2>
+        <p>CÓDIGO RAMO 6</p>
+        <p>SECCIÓN 6</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+
+
+  <!-- Botón para salir al final de la pantalla -->
+  <ion-button class="boton-salir">
+    Salir
+  </ion-button>
+  
 </ion-content>
