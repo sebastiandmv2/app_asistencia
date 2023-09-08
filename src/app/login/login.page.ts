@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Usuario } from 'usuario.model';
-import { Router } from '@angular/router'; // Importa el Router
+import { Router, NavigationExtras } from '@angular/router'; // Importa el Router
 
 @Component({
   selector: 'app-login',
@@ -34,19 +34,32 @@ export class LoginPage {
       this.isPasswordValid = false;
     }
   }
-
+  getUserName(email: string): string {
+    if (email === 'jirafales@duoc.cl') {
+      return 'Jirafales';
+    } else if (email === 'corchea@duoc.cl') {
+      return 'Corchea';
+    }
+    return '';
+  }
   login() {
     console.log('Iniciando sesión con:', this.user.email, this.user.password);
 
     if (this.validateUser(this.user)) {
       console.log('Inicio de sesión exitoso');
 
+      // creamos una state con n datos para acceder a ellos en los siguientes page
+      let NavigationExtras: NavigationExtras = {
+      state: {user: this.user.email, kaka: "111111", name: this.getUserName(this.user.email)}
+
+      };
+
       // Redirige al usuario a la página adecuada después del inicio de sesión
       if (this.user.email === 'jirafales@duoc.cl') {
-        this.router.navigate(['/profesor-home']); // Redirige a la página del profesor
+        this.router.navigate(['/profesor-home'],NavigationExtras); // Redirige a la página del profesor
       }
       else if (this.user.email === 'corchea@duoc.cl') {
-        this.router.navigate(['/alumno-home']); // Redirige a la página del alumno
+        this.router.navigate(['/alumno-home'],NavigationExtras); // Redirige a la página del alumno
       } else {
         // Redirige a la página predeterminada (por ejemplo, scanner)
         this.router.navigate(['/scanner']);

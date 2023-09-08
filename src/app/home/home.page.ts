@@ -18,7 +18,7 @@ export class HomePage {
       const animation = this.animationCtrl.create()
         .addElement(button)
         .duration(1000) // Duración de la animación en milisegundos
-        .fromTo('transform', 'scale(-5)', 'scale(1)'); //  aumento de tamaño
+        .fromTo('transform', 'scale(10)', 'scale(1)'); //  aumento de tamaño
 
       animation.play();
     }
