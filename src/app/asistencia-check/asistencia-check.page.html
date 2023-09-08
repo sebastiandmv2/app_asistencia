@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Asistencia Check</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Asistencia Check</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Nombre del alumno -->
+  <ion-card-header>
+    <ion-card-title>Asistencia Registrada Exitosamente!</ion-card-title>
+  </ion-card-header>
+
+    <!-- Animacion Check -->
+    <div class="check-container">
+      <ion-img id="check-box" src="assets/check.jpg"></ion-img>
+    </div>
+
+  <div class="botones-container boton-salir">
+    <!-- Botón para salir -->
+    <ion-button class="boton-salir" routerLink="/alumno-home">
+      Volver
+    </ion-button>
+  </div>
+</ion-content>

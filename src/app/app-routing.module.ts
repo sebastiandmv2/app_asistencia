@@ -30,7 +30,11 @@ const routes: Routes = [
   {
     path: 'alumno-home',
     loadChildren: () => import('./alumno-home/alumno-home.module').then( m => m.AlumnoHomePageModule)
+  },  {
+    path: 'asistencia-check',
+    loadChildren: () => import('./asistencia-check/asistencia-check.module').then( m => m.AsistenciaCheckPageModule)
   },
+
 
 ];
 
