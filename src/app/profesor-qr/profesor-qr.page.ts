@@ -10,18 +10,26 @@ export class ProfesorQrPage implements OnInit {
 
   userProfesor ="";
   userName ="";
-  constructor(private activeroute: ActivatedRoute,private router:Router) {
+  nomClase="";
+  codClase="";
 
-    this.activeroute.queryParams.subscribe(params => {
-      if (this.router.getCurrentNavigation()?.extras.state) {
-          this.userProfesor = this.router.getCurrentNavigation()?.extras.state?.['user'];
-          this.userName = this.router.getCurrentNavigation()?.extras.state?.['name'];
-      }
-  });
+  constructor(private route: ActivatedRoute,private router:Router) {
 
-   }
+    if (this.router.getCurrentNavigation()?.extras.state) {
+      const state = this.router.getCurrentNavigation()?.extras.state;
+      this.userProfesor = this.router.getCurrentNavigation()?.extras.state?.['user'];
+      this.userName = this.router.getCurrentNavigation()?.extras.state?.['name'];
+    }
+    this.route.queryParams.subscribe(params => {
+
+      this.nomClase = params['clase'];
+      this.codClase = params['codigo'];
+    });
+    
+  }
+
+  
 
   ngOnInit() {
   }
-
 }

@@ -11,11 +11,14 @@ export class ProfesorHomePage implements OnInit {
 
 userHome = "";
 userName = "";
+clase="";
+codigo="";
 
-  constructor(private activeroute: ActivatedRoute,
+  constructor(
+    private activeroute: ActivatedRoute,
     private actionSheetCtrl: ActionSheetController,
-
-    private router: Router // Inyecta Router
+    private router: Router
+    
   ) {
 
     this.activeroute.queryParams.subscribe(params => {
@@ -29,10 +32,13 @@ userName = "";
   ngOnInit() {
   }
 
-  async presentActionSheet() {
+  async presentActionSheet(clase: string, codigo: string) {
 
-    let NavigationExtras: NavigationExtras = {
-      state: {user: this.userHome, name: this.userName}
+    const navigationExtras: NavigationExtras = {
+      state: {
+        user: this.userHome,
+        name: this.userName,
+      }
     };
 
     const actionSheet = await this.actionSheetCtrl.create({
@@ -40,19 +46,13 @@ userName = "";
       buttons: [
         {
           text: 'Generar QR',
-          data: {
-            action: 'qrGenerate',
-          },
           handler: () => {
-            this.router.navigate(['/profesor-qr']); 
+            this.router.navigate(['/profesor-qr'], navigationExtras);
           },
         },
         {
           text: 'Cancel',
           role: 'cancel',
-          data: {
-            action: 'cancel',
-          },
         },
       ],
     });

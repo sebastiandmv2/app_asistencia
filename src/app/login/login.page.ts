@@ -50,7 +50,7 @@ export class LoginPage {
 
       // creamos una state con n datos para acceder a ellos en los siguientes page
       let NavigationExtras: NavigationExtras = {
-      state: {user: this.user.email, kaka: "111111", name: this.getUserName(this.user.email)}
+      state: {user: this.user.email, telefono: "111111", name: this.getUserName(this.user.email)}
 
       };
 
