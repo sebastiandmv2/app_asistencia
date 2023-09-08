@@ -1,10 +1,5 @@
 /* Estilo para el contenedor del alumno */
-ion-content{
-
-    --ion-background-color:#ffffff;
-}
-
-    ion-card {
+ion-card {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -22,16 +17,14 @@ ion-content{
   
   /* Estilo para la imagen del alumno */
   ion-img {
-    max-width: 100%;
-    max-height: 100%; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 40%;
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50% !important;
+    overflow: hidden;   
   }
   
   /* Estilo para el contenedor de los botones */
-  .qr-container {
+  .botones-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,6 +36,13 @@ ion-content{
     margin-top: 16px;
   }
   
+  /* Estilo para el botón "Registrar Asistencia" */
+.boton-registrar {
+    --padding-top: 25%; /* Ajusta el espacio superior del botón */
+    --padding-bottom: 25%; /* Ajusta el espacio inferior del botón */
+    font-size: 24px; /* Tamaño de fuente grande */
+    align-self: center; /* Centrar horizontalmente el botón */
+  }
   
   /* Estilo para el botón "Salir" */
   .boton-salir {
@@ -54,9 +54,3 @@ ion-content{
     margin: 0 auto; /* Centrar horizontalmente el botón */
   }
   
-  /* Estilo para el contenedor de los botones */
-  .botones-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }

@@ -1,32 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { ActionSheetController } from '@ionic/angular';
-import { Router } from '@angular/router'; // Importa Router
 
 @Component({
-  selector: 'app-profesor-home',
-  templateUrl: './profesor-home.page.html',
-  styleUrls: ['./profesor-home.page.scss'],
+  selector: 'app-qr-modal',
+  templateUrl: './qr-modal.component.html',
+  styleUrls: ['./qr-modal.component.scss'],
 })
-export class ProfesorHomePage implements OnInit {
-  constructor(
-    private actionSheetCtrl: ActionSheetController,
-    private router: Router // Inyecta Router
-  ) {}
+export class QrModalComponent implements OnInit {
+  constructor(private actionSheetCtrl: ActionSheetController) {}
 
   ngOnInit() {
+    // Llama a la función presentActionSheet() automáticamente cuando se inicia el componente.
+    this.presentActionSheet();
   }
 
   async presentActionSheet() {
     const actionSheet = await this.actionSheetCtrl.create({
-      header: 'Generador de QR',
+      header: 'Actions',
       buttons: [
         {
           text: 'Generar QR',
           data: {
             action: 'qrGenerate',
-          },
-          handler: () => {
-            this.router.navigate(['/profesor-qr']); 
           },
         },
         {

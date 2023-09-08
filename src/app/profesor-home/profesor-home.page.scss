@@ -1,0 +1,55 @@
+/* Estilo para el contenedor del profesor */
+ion-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    margin: 16px;
+  }
+  
+  /* Estilo para el título (nombre del profesor) */
+  ion-card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 16px;
+  }
+  
+  /* Estilo para la imagen del profesor */
+  ion-img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  /* Estilo para la lista de rectángulos */
+  .rectangulos-list {
+    width: 90%;
+    margin: 16px auto;
+    max-height: calc(100% - 40%); /* Resta la altura del botón "Salir" y otros elementos superiores */
+    overflow-y: auto; /* Habilita el desplazamiento vertical */
+  }
+  
+  /* Estilo para los elementos de la lista */
+  ion-item {
+    width: 100%;
+  }
+  
+  /* Estilo para el botón "Salir" */
+  .boton-salir {
+    position: absolute;
+    width: 90%;
+    bottom: 5%;
+    height: 7%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  
+  .small-modal {
+    opacity: 0;
+    width: 100px;
+   height: 100px;
+
+}

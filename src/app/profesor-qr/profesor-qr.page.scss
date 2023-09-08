@@ -1,0 +1,63 @@
+/* Estilo para el contenedor del alumno */
+ion-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    margin: 16px;
+  }
+  
+  /* Estilo para el título (nombre del alumno) */
+  ion-card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 16px;
+  }
+  
+  /* Estilo para la imagen del profesor */
+  .profile-img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 50% !important;
+    overflow: hidden;   
+  }
+
+    /* Estilo para la imagen qr */
+    .qr-img {
+        width: 80%;
+        padding-top: 10%;
+        margin: 0 auto;
+      }
+  
+  /* Estilo para el contenedor de los botones */
+  .botones-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Estilo para los botones */
+  ion-button {
+    width: 90%;
+    margin-top: 16px;
+  }
+  
+  /* Estilo para el botón "Registrar Asistencia" */
+.boton-registrar {
+    --padding-top: 25%; /* Ajusta el espacio superior del botón */
+    --padding-bottom: 25%; /* Ajusta el espacio inferior del botón */
+    font-size: 24px; /* Tamaño de fuente grande */
+    align-self: center; /* Centrar horizontalmente el botón */
+  }
+  
+  /* Estilo para el botón "Salir" */
+  .boton-salir {
+    position: absolute;
+    bottom: 5%; /* Ajusta la distancia desde la parte inferior de la pantalla */
+    height: 7%;
+    left: 0; /* Alinear el botón a la izquierda */
+    right: 0; /* Alinear el botón a la derecha */
+    margin: 0 auto; /* Centrar horizontalmente el botón */
+  }
+  
